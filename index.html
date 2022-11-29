@@ -18,13 +18,13 @@
         <img src="assets\clouds.png" alt="clouds" id="clouds">
         <img src="assets\backbg.png" alt="backbg" id="backbg">
         <h2 id="text">WELCOME!</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="assets\frontbg.png" alt="frontbg" id="frontbg">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>About Me</h2>
     </div>
-    <!-- <div class="sec">
+    <div class="profile-section">
         <div id="profile">
             <div class="flip-card">
                   <div class="flip-card-inner">
@@ -64,9 +64,31 @@
               </div>
           </div>
     </div> -->
-    <!-- <footer>
+    <footer>
         <p>@adrielop</p>
 
-    </footer>  -->
+    </footer> 
+    <script>
+        let sun = document.getElementById('sun');
+        let clouds = document.getElementById('clouds');
+        let backbg = document.getElementById('backbg');
+        let frontbg = document.getElementById('frontbg');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            clouds.style.left = value * -1.25 + 'px';
+            sun.style.top = value * 1.25 +'px';
+            backbg.style.top = value * 0.25 +'px';
+            frontbg.style.top = value * 0 +'px';
+            text.style.marginRight = value * 4 +'px';
+            text.style.marginTop = value * 0.3 +'px';
+            btn.style.marginTop = value * 0.75 +'px';
+            header.style.top = value * 0.5 + 'px';
+
+        })
+    </script>
 </body>
 </html>
