@@ -1,94 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+  </head>
+  <body>
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <a href="#" class="logo">portefeuille.</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </header>
     <section>
-        <img src="assets\Sun.png" alt="sun" id="sun">
-        <img src="assets\clouds.png" alt="clouds" id="clouds">
-        <img src="assets\backbg.png" alt="backbg" id="backbg">
-        <h2 id="text">WELCOME!</h2>
-        <a href="#sec" id="btn">Explore</a>
-        <img src="assets\frontbg.png" alt="frontbg" id="frontbg">
+      <img src="assets\Sun.png" alt="sun" id="sun" />
+      <img src="assets\clouds.png" alt="clouds" id="clouds" />
+      <img src="assets\backbg.png" alt="backbg" id="backbg" />
+      <h2 id="text">WELCOME!</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="assets\frontbg.png" alt="frontbg" id="frontbg" />
     </section>
-    <div class="sec" id="sec">
-        <h2>About Me</h2>
-    </div>
-    <div class="profile-section">
-        <div id="profile">
-            <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="foto.jpg" alt="Avatar" style="width:270px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                      <h1>INDO AEROSPACE 2022</h1>
-                      <p>Halim Perdana Kusuma</p>
-                    </div>
-                  </div>
-                </div>
-          
-              <div class="profile_details">
-                  <table>
-                      <tr>
-                          <td class="aspect">Name</td>
-                          <td>: Adriel Omarpadu Pandiangan</td>
-                      </tr>
-                      <tr>
-                          <td class="aspect">Faculty</td>
-                          <td>: Faculty of Engineering</td>
-                      </tr>
-                      <tr>
-                          <td class="aspect">Major</td>
-                          <td>: Military Informatics</td>
-                      </tr>
-                      <tr>
-                          <td class="aspect">Student ID</td>
-                          <td>: 320200401001</td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="profile_motto">
-                  <h3>Motto</h3>
-                  <p>"Do More With Less"</p>
-              </div>
+    <div class="sec" id="secOne">
+      <h2 id="title-one" class="animate__animated">About Me</h2>
+      <div class="profile-section">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="assets\foto.jpg"
+                alt="Avatar"
+                style="width: 270px; height: 300px"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>INDO AEROSPACE 2022</h1>
+              <p>Halim Perdana Kusuma</p>
+            </div>
           </div>
+        </div>
+        <div class="info">
+          <h2 id="info-name" class="animate__animated">Hey i'm Adriel!</h2>
+          <p id="info-tagline">
+            An Ordinary Full-Stuck Informatics Student, and Sometimes also a
+            Full-Snack Developer.
+          </p>
+          <a href="/timeline/index.html">Know Me More</a>
+        </div>
+      </div>
     </div>
-    <footer>
-        <p>@adrielop</p>
-
-    </footer> 
-    <script>
-        let sun = document.getElementById('sun');
-        let clouds = document.getElementById('clouds');
-        let backbg = document.getElementById('backbg');
-        let frontbg = document.getElementById('frontbg');
-        let btn = document.getElementById('btn');
-        let text = document.getElementById('text');
-        let header = document.querySelector('header');
-
-        window.addEventListener('scroll',function(){
-            let value = window.scrollY;
-            clouds.style.left = value * -1.25 + 'px';
-            sun.style.top = value * 1.25 +'px';
-            backbg.style.top = value * 0.25 +'px';
-            frontbg.style.top = value * 0 +'px';
-            text.style.marginRight = value * 2 +'px';
-            text.style.marginTop = value * 0.3 +'px';
-            btn.style.marginTop = value * 0.75 +'px';
-            header.style.top = value * 0.5 + 'px';
-
-        })
-    </script>
-</body>
+    <div id="secTwo" class="sec">
+      <h2 id="title-two" class="animate__animated">Activities</h2>
+      <div id="sec-container">
+        <div class="container">
+          <div class="box">
+            <div class="imgBx">
+              <img src="assets\foto2.jpg" />
+            </div>
+            <div class="content">
+              <h2>College</h2>
+              <p>
+                Currently studying at the Republic of Indonesia Defense
+                University
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="assets\foto5.jpg" />
+            </div>
+            <div class="content">
+              <h2>Major</h2>
+              <p>
+                Military informatics is my major program, Why it's called
+                military?
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="assets\foto3.jpg" />
+            </div>
+            <div class="content">
+              <h2>Drumband</h2>
+              <p>Canka Praditya Wiratama is our pride and i take part of it.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="assets\foto6.jpg" />
+            </div>
+            <div class="content">
+              <h2>Domicile</h2>
+              <p>
+                Currently live in Bogor District but stuck in the lovely dorm.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec" id="sec-object">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <footer id="footer">
+      <p>@adrielop</p>
+      <div class="container-fluid">
+        <!-- social media icons -->
+        <div class="social-icons mt-4">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
